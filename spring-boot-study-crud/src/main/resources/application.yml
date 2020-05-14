@@ -1,0 +1,4 @@
+# 配置多环境，默认激活 dev 开发环境
+spring:
+  profiles:
+    active: dev

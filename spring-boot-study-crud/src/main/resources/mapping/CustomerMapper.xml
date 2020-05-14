@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuzx.boot.crud.mapper.CustomerMapper">
+
+    <insert id="save" parameterType="Customer">
+        insert into customer (cname, age, gender)
+        values (#{cname}, #{age}, #{gender})
+    </insert>
+
+    <update id="update" parameterType="Customer">
+        update customer set cname = #{cname}, age = #{age}, gender = #{gender}
+        where id = #{id}
+    </update>
+
+    <delete id="delete" parameterType="INTEGER">
+        delete from customer where id = #{id}
+    </delete>
+
+    <select id="query" parameterType="INTEGER" resultType="Customer">
+        select id, cname, age, gender from customer where id = #{id}
+    </select>
+
+    <select id="queryForList" resultType="Customer">
+        select id, cname, age, gender from customer
+    </select>
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuzx.boot.crud.mapper.GoodStoreMapper">
+
+    <insert id="save" parameterType="GoodsStore">
+        insert into goods_store (code, store)
+        values (#{code}, #{store})
+    </insert>
+
+    <update id="update" parameterType="GoodsStore">
+        update goods_store set code = #{code}, store = #{store}
+        where code = #{code}
+    </update>
+
+    <delete id="delete" parameterType="String">
+        delete from goods_store where code = #{code}
+    </delete>
+
+    <select id="query" parameterType="String" resultType="GoodsStore">
+        select code, store from goods_store where code = #{code}
+    </select>
+
+    <select id="queryForList" resultType="GoodsStore">
+        select code, store from goods_store
+    </select>
+</mapper>

@@ -1,0 +1,38 @@
+# 配置 web 服务器端口
+server:
+  port: 8080
+
+# 配置数据源
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 20000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test_db?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    username: root
+    password: 921109wu
+
+    # druid 连接池配置
+    druid:
+      initial-size: 5
+      min-idle: 5
+      max-active: 100
+      max-wait: 60000
+
+# 配置 MyBatisb
+mybatis:
+  mapper-locations: classpath:mapping/*Mapper.xml # MyBatis 的 Mapper 映射文件
+  type-aliases-package: com.wuzx.boot.crud.entity # 映射实体类别名
+# redis 配置
+redis:
+  host: 127.0.0.1
+  port: 6379
+  timeout: 20000
+  jedis:
+    pool:
+      max-active: 8
+      min-idle: 0
+      max-idle: 8
+      max-wait: -1
