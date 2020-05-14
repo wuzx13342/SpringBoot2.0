@@ -16,7 +16,7 @@ import java.util.List;
  *          DELETE(删除资源)
  *          PUT(修改资源)
  * @author wuzx
- * @wx: 36567126
+ * @email  wuzhixiang.ithz@gmail.com
  */
 @RestController
 @RequestMapping("/customer")

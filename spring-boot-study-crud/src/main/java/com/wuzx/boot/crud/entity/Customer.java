@@ -6,7 +6,7 @@ import lombok.Data;
  * Customer 实体类 {@link Customer}
  *
  * @author wuzx
- * @wx: 36567126
+ * @email wuzhixiang.ithz@gmail.com
  */
 @Data
 public class Customer {
