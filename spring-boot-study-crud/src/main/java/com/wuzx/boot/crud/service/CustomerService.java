@@ -8,7 +8,7 @@ import java.util.List;
  * Customer 业务接口 {@link CustomerService}
  *
  * @author wuzx
- * @wx: 36567126
+ * @email wuzhixiang.ithz@gmail.com
  */
 public interface CustomerService {
     /**

@@ -11,7 +11,7 @@ import java.util.List;
  *  - 建议使用 xml 方式来进行 sql 的编写
  *
  * @author wuzx
- * @wx: 36567126
+ * @email wuzhixiang.ithz@gmail.com
  */
 @Repository
 public interface CustomerMapper {

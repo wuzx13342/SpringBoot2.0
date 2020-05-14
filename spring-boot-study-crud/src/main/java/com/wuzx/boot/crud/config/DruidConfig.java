@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * Druid 连接池监控 {@link DruidConfig}
  *
  * @author wuzx
- * @wx: 36567126
+ * @email wuzhixiang.ithz@gmail.com
  */
 @Configuration
 public class DruidConfig {

@@ -8,7 +8,7 @@ import java.util.List;
  * GoodsStore 业务接口 {@link GoodsStoreService}
  *
  * @author wuzhixiang
- * @wx: 36567126
+ * @email wuzhixiang.ithz@gmail.com
  */
 public interface GoodsStoreService {
 

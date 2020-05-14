@@ -12,7 +12,7 @@ import java.util.List;
  * Customer 业务接口实现类 {@link CustomerServiceImpl}
  *
  * @author wuzx
- * @wx: 36567126
+ * @email wuzhixiang.ithz@gmail.com
  */
 @Service
 public class CustomerServiceImpl implements CustomerService {
