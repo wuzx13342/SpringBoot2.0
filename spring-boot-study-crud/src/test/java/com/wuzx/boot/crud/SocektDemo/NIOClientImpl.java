@@ -12,6 +12,9 @@ import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * @author joelwu_1109 
+ */
 public class NIOClientImpl implements Runnable {
 
     private BlockingQueue<String> words;

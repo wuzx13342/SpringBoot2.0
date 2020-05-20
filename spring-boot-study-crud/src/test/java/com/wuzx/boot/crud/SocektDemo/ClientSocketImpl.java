@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
 
+/**
+ *  @author joelwu_1109
+ */
 public class ClientSocketImpl {
 
     public static void main(String[] args) {
