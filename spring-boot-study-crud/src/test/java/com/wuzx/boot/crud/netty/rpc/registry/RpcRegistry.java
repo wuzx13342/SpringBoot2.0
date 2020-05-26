@@ -25,11 +25,14 @@ public class RpcRegistry {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 
         try {
+            //1、创建ServerBootStrap实例
             ServerBootstrap b = new ServerBootstrap();
+            //主从线程模型 2、设置并绑定Reactor线程池：EventLoopGroup，EventLoop就是处理所有注册到本线程的Selector上面的Channel
             b.group(bossGroup, workerGroup)
+            //3、设置并绑定服务端的channel
                     .channel(NioServerSocketChannel.class)
                     .childHandler(new ChannelInitializer<SocketChannel>() {
-
+                        //4、5、创建处理网络事件的ChannelPipeline和handler，网络时间以流的形式在其中流转，handler完成多数的功能定制：比如编解码 SSl安全认证
                         @Override
                         protected void initChannel(SocketChannel ch) throws Exception {
                             ChannelPipeline pipeline = ch.pipeline();
@@ -53,6 +56,7 @@ public class RpcRegistry {
                     })
                     .option(ChannelOption.SO_BACKLOG, 128)
                     .childOption(ChannelOption.SO_KEEPALIVE, true);
+            //6、绑定并启动监听端口
             ChannelFuture future = b.bind(port).sync();
             System.out.println("GP RPC Registry start listen at " + port );
             future.channel().closeFuture().sync();
