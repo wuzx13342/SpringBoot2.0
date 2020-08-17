@@ -26,13 +26,13 @@ mybatis:
   mapper-locations: classpath:mapping/*Mapper.xml # MyBatis 的 Mapper 映射文件
   type-aliases-package: com.wuzx.boot.crud.entity # 映射实体类别名
 # redis 配置
-redis:
-  host: 127.0.0.1
-  port: 6379
-  timeout: 20000
-  jedis:
-    pool:
-      max-active: 8
-      min-idle: 0
-      max-idle: 8
-      max-wait: -1
+#redis:
+#  host: 127.0.0.1
+#  port: 6379
+#  timeout: 20000
+#  jedis:
+#    pool:
+#      max-active: 8
+#      min-idle: 0
+#      max-idle: 8
+#      max-wait: -1
