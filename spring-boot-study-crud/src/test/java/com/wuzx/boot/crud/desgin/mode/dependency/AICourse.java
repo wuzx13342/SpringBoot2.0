@@ -12,6 +12,7 @@ package com.wuzx.boot.crud.desgin.mode.dependency;
 public class AICourse implements ICourse {
     @Override
     public void study() {
+        //issue
         System.out.println("Tom学习AI");
     }
 }
