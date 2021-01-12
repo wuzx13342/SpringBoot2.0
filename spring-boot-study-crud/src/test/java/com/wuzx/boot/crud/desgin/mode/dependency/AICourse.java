@@ -14,5 +14,6 @@ public class AICourse implements ICourse {
     public void study() {
         //issue
         System.out.println("Tom学习AI");
+        System.out.println("111");
     }
 }
